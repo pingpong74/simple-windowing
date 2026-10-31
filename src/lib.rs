@@ -5,7 +5,15 @@ use crate::runner::Runner;
 use winit::event_loop::EventLoop;
 
 pub use crate::input::InputManager;
-pub use winit::{event::MouseButton, keyboard::KeyCode, window::Window};
+pub use winit::{
+    event::MouseButton,
+    keyboard::KeyCode,
+    raw_window_handle::{
+        DisplayHandle, HasDisplayHandle, HasWindowHandle, RawDisplayHandle, RawWindowHandle,
+        WindowHandle,
+    },
+    window::Window,
+};
 
 pub struct UpdateInfo<'a> {
     pub dt: f64,
